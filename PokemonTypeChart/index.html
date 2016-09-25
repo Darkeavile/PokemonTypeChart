@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">	
 		<!-- TITLE -->
-		<title>Pokemon Showdown Type Chart</title>
+		<title>Poke Showdown Chart</title>
 		<link rel="shortcut icon" href="">
 
 		<!-- CSS -->
@@ -10,25 +10,40 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> 
 
 		<!-- JAVASCRIP -->
-
+		<script> src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
 
 	</head>
 
 
 	<body>
 		<div class="row">
-    		<div class="col-md-5 col-md-offset-3">
+    		<div class="col-md-5 col-md-offset-4">
     			<div class="title">
 					<h1> Pokemon Showdown Type Chart </h1>
 				</div>
     		</div>
-    		<div class="col-md-5 col-md-offset-5">
-    			<div>
-    				<button type="button" class="btn btn-primary btn-lg round top-buffer-x2" id="importTeam">Import Team</button>
-    			</div>
+    		<div class="col-md-5 col-md-offset-4">
+    			<div id="inputArea" class="top-buffer-x2"> 
+					<form>
+  						<textarea name="teamText" form="importID" placeholder="Paste your team's import code here."></textarea>
+					</form>
+				</div>
     		</div>		
 		</div>
-		
+
+    	<div class ="row">
+			<div class="col-md-8 col-md-offset-4">
+					
+				<div id="submitInput">
+					<form action="table" id="inputArea" action="team.html" method="get"> 
+						<button type="submit" class="btn btn-primary btn-lg round top-buffer-x2" id="importedTeam" onclick="showInput()">Import Team</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+
 	
 	</body>
 
