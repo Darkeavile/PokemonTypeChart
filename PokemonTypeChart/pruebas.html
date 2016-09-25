@@ -6,7 +6,7 @@
 		<link rel="shortcut icon" href="">
 
 		<!-- CSS -->
-		<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> 
 
 		<!-- JAVASCRIP -->
 		<script src="data/pokedex.js"></script>
@@ -17,102 +17,98 @@
 	</head>
 
 	<body>
-		<script>	
 
-/*
-			document.write(BattlePokedex.bulbasaur.species);
-			
+		<script>
 
-			function searchPokemonNumber(number){
+			document.write("Inmune to: " + getInmuneTypes("Gengar") + "</br>");
 
-				for(pokemon in BattlePokedex){
-					if (BattlePokedex.hasOwnProperty(pokemon)) {
-						var aa = BattlePokedex[pokemon];
-						if(aa.num == number){
-							return aa.species;
-						}
-					}
-				}				
-			}
+			document.write("Weak to: " + getEffectiveTypes("Gengar") + "</br>");
 
-			function searchPokemonName(name){
+			document.write("Resistent to: " + getResistentTypes("Gengar") + "</br>");
 
-				for(pokemon in BattlePokedex){
-					if (BattlePokedex.hasOwnProperty(pokemon)) {
-						var aa = BattlePokedex[pokemon];
-						if(aa.species == name){
-							return aa.num;
-						}
-					}
-				}				
-			}
-
-
-			function searchType(name){
-
-				for(pokemon in BattlePokedex){
-					if (BattlePokedex.hasOwnProperty(pokemon)) {
-						var aa = BattlePokedex[pokemon];
-						if(aa.species == name){
-							return aa.types;
-						}
-					}
-				}				
-			}
-
-
-			document.write("</br> </br>");
-
-
-			document.write(searchPokemonNumber(288) + "</br>");
-
-			document.write(searchPokemonName("Celebi") + "</br>");
-
-			document.write(searchType("Celebi") + "</br>");
-
-
-			for(type in BattleTypeChart){
-				if(BattleTypeChart.hasOwnProperty(type)){
-					var aa = BattleTypeChart[type];
-					if(type == "Ghost"){
-						for(type2 in aa){
-							if(aa.hasOwnProperty(type2)){
-								if(type2 == "damageTaken"){
-									for(type3 in type2){
-										var bb = aa.damageTaken[type3];
-										document.write(type3 + "</br>");
-									}									
-								}								
-							}
-						}						
-					}
-				}
-			}   
-	
-
-		document.write("</br> </br> </br> </br> </br> </br>");
-
-
-
-	  for(aa in BattleTypeChart.Bug.damageTaken){
-			document.write(BattleTypeChart.Bug.damageTaken[aa] + "</br>");
-		}
-
-
-		for(type in BattleTypeChart){
-			if(BattleTypeChart.hasOwnProperty(type)){
-				var aa = BattleTypeChart[type];	
-				if(type == "Ghost"){					
-					for(type2 in aa){
-						var bb = aa[type2];	
-						document.write(type2 + " : " + bb + "</br>");										
-					}					
-				}
-			}	
-		}  
-*/
+			//document.write("</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>");
 
 		</script>
+		
+
+</br> </br> </br> 
+		
+		<textarea id="prueba2">Garchomp @ Rocky Helmet  
+Ability: Rough Skin  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Dragon Claw  
+- Fire Fang  
+- Stone Edge  
+
+Klefki @ Leftovers  
+Ability: Prankster  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Thunder Wave  
+- Magic Coat  
+- Dazzling Gleam  
+
+Gengar @ Life Orb  
+Ability: Levitate  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dazzling Gleam  
+- Focus Blast  
+- Shadow Ball  
+- Sludge Wave  
+
+Weavile @ Sitrus Berry  
+Ability: Pickpocket  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Fake Out  
+- Ice Shard  
+- Knock Off  
+- Low Kick  
+
+Taillow @ Focus Sash  
+Ability: Scrappy  
+Level: 1  
+EVs: 236 Atk / 36 SpD  
+Jolly Nature  
+- Endeavor  
+- Quick Attack  
+- Protect  
+-   
+
+Latios-Mega @ Latiosite  
+Ability: Levitate  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Draco Meteor  
+- Energy Ball  
+- Ice Beam  
+- Psychic  
+
+</textarea>
+
+</br> </br> </br> 
+
+
+
+		<script>
+			
+			var text = document.getElementById("prueba2");			
+			var team = readTeam(text);			
+			for(poke in team){
+				var pokimon = team[poke];
+				document.write("Pokemon: "+ poke  + " type : " + pokimon + "</br>");						
+			}
+			
+
+		</script>
+
 
 	</body>
 
